@@ -172,3 +172,7 @@
 - Unit tests ensure reliability and prevent regressions.
 
 - Clean, modular code for easy extension (e.g., adding new features like categories or suppliers).
+
+### Render Deployed
+
+- https://inventory-management-system-backend-xfvh.onrender.com
