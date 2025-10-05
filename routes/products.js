@@ -22,7 +22,7 @@ router.put("/:id/inc", jwtAuthMiddleware, incStock);
 router.put("/:id/dec", jwtAuthMiddleware, decStock);
 
 // Check low stocks
-router.get("/low-stock", getLowStock);
+router.get("/low-stock", jwtAuthMiddleware, getLowStock);
 
 // Get Specific Product Details
 router.get("/:id", getProductDetails);
