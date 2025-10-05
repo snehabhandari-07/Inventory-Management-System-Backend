@@ -16,61 +16,60 @@
 
 1. Product Management (CRUD)
 
-- Create, Read, Update, Delete endpoints for products.
+    - Create, Read, Update, Delete endpoints for products.
 
-- Product fields:
-```
-    {
-    "name": "Product Name",
-    "description": "Product Description",
-    "stock_quantity": 100,
-    "low_stock_threshold": 10
-    }
-```
+    - Product fields:
+        ```
+            {
+            "name": "Product Name",
+            "description": "Product Description",
+            "stock_quantity": 100,
+            "low_stock_threshold": 10
+            }
+        ```
 
-- Only admins can create, update, delete, or adjust stock.
+    - Only admins can create, update, delete, or adjust stock.
 
-- Regular users can only fetch product list or details.
+    - Regular users can only fetch product list or details.
 
 2. Inventory Logic
 
-- Stock quantity cannot go below zero.
+    - Stock quantity cannot go below zero.
 
-- Endpoints to increase/decrease stock:
+    - Endpoints to increase/decrease stock:
 
-- Increase stock: Adds quantity to a product.
+    - Increase stock: Adds quantity to a product.
 
-- Decrease stock: Subtracts quantity, returns 400 Bad Request if insufficient stock.
+    - Decrease stock: Subtracts quantity, returns 400 Bad Request if insufficient stock.
 
 3. Bonus Feature ✨
 
-- low_stock_threshold for products.
+    - low_stock_threshold for products.
 
-- Endpoint to list products currently below the threshold.
+    - Endpoint to list products currently below the threshold.
 
 4. Authentication & Authorization
 
-- JWT-based authentication.
+    - JWT-based authentication.
 
-- Admin-only actions:
+    - Admin-only actions:
 
-    1. Create Product
+        1. Create Product
 
-    2. Update Product
+        2. Update Product
 
-    3. Delete Product
+        3. Delete Product
 
-    4. Increment/Decrement Stock
+        4. Increment/Decrement Stock
 
-- All users can:
+    - All users can:
 
-    1. Fetch product list
+        1. Fetch product list
 
-    2. Fetch product details
+        2. Fetch product details
 
 ###  Test Coverage
-
-- Unit tests for stock logic:
+  - Unit tests for stock logic:
 
     1. Adding stock
 
@@ -96,47 +95,47 @@
 
 1. Clone the repository
 
-```
-git clone https://github.com/snehabhandari-07/Inventory-Management-System-Backend.git
-cd Inventory-Management-System
-```
+    ```
+    git clone https://github.com/snehabhandari-07/Inventory-Management-System-Backend.git
+    cd Inventory-Management-System
+    ```
 
 2. Install dependencies
 
-```
-npm install
-```
+    ```
+    npm install
+    ```
 
 3. Create .env file for development:
 
-```
-PORT=5000
-MONGODB_URI=your_mongodb_atlas_uri
-SECRET_KEY=your_jwt_secret
-```
+    ```
+    PORT=5000
+    MONGODB_URI=your_mongodb_atlas_uri
+    SECRET_KEY=your_jwt_secret
+    ```
 
 4. Create .env.test file for testing:
 
-```
-MONGODB_URI=your_test_mongodb_uri
-SECRET_KEY=your_jwt_secret
-```
+    ```
+    MONGODB_URI=your_test_mongodb_uri
+    SECRET_KEY=your_jwt_secret
+    ```
 
 - .env.test and .env should be added to .gitignore to keep credentials safe.
 
 5. Run the development server
 
-```
-npm run dev
-```
+    ```
+    npm server.js
+    ```
 
 - Server will run on http://localhost:5000.
 
 6. Run tests
 
-```
-npx jest
-```
+    ```
+    npx jest
+    ```
 
 ## 🛠️ Available Endpoints
 
@@ -156,9 +155,9 @@ npx jest
 
 - All admin routes require JWT in Authorization header:
 
-```
-Authorization: Bearer <token>
-```
+    ```
+    Authorization: Bearer <token>
+    ```
 
 - Tokens are generated when creating a test/admin user in DB:
 
