@@ -1,5 +1,5 @@
 const Product = require("../models/Product");
-const User = require("../models/User"); 
+const User = require("../models/User");
 
 const checkAdminRole = async (userId) => {
   try {
@@ -39,10 +39,9 @@ const getProductDetails = async (req, res) => {
 
 const addProduct = async (req, res) => {
   try {
-
     if (!(await checkAdminRole(req.user.id)))
       return res.status(403).json({ message: "User not Admin" });
-    
+
     // Data - req.body
     const productData = req.body;
     const newProduct = new Product(productData);

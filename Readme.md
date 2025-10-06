@@ -176,3 +176,7 @@
 ### Render Deployed
 
 - https://inventory-management-system-backend-xfvh.onrender.com
+
+### Loom Video 
+
+- https://www.loom.com/share/5df6aff757294b3e89e761913c31cdd5
